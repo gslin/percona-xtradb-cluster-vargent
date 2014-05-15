@@ -5,6 +5,10 @@ work() {
 
     apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 
+    cat > /etc/apt/apt.conf <<EOF
+Acquire::http::Proxy "http://proxy.hinet.net:80";
+EOF
+
     cat > /etc/apt/sources.list.d/percona.list <<EOF
 deb http://repo.percona.com/apt precise main
 deb-src http://repo.percona.com/apt precise main
