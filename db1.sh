@@ -69,6 +69,7 @@ wait_timeout = 60
 # Galera
 wsrep_cluster_address = gcomm://192.168.50.101:4567,192.168.50.102:4567,192.168.50.103:4567
 wsrep_cluster_name = test
+wsrep_node_address = 192.168.50.101
 wsrep_provider = /usr/lib/libgalera_smm.so
 wsrep_provider_options = "gcache.size=16M"
 wsrep_slave_threads = 32
