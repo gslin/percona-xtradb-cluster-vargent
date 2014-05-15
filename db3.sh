@@ -10,7 +10,7 @@ deb http://repo.percona.com/apt precise main
 deb-src http://repo.percona.com/apt precise main
 EOF
 
-    DEBIAN_FRONTEND=noninteractive apt-get update
+    apt-get update
 
     DEBIAN_FRONTEND=noninteractive apt-get -y install dstat vim-nox
     DEBIAN_FRONTEND=noninteractive apt-get -y install percona-xtradb-cluster-galera-2.x
