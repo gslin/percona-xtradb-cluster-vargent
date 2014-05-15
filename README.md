@@ -104,3 +104,10 @@ You might see:
 </pre>
 
 You can see <code>wsrep_cluster_size</code> is 3, which means successful.
+
+License
+-------
+
+http://opensource.org/licenses/BSD-3-Clause
+
+2014, Gea-Suan Lin &lt;gslin@kkbox.com>, KKBOX.
