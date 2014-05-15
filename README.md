@@ -6,6 +6,8 @@ Overview
 
 This <code>Vagrantfile</code> will build a PXC 5.5 cluster (three VMs), and you can try PXC operation in this cluster.
 
+Tested on Vagrant 1.6.2 (w/ VirtualBox).
+
 Configuration
 -------------
 
