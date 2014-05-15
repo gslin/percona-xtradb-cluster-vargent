@@ -19,8 +19,10 @@ EOF
     DEBIAN_FRONTEND=noninteractive apt-get -y install dstat vim-nox
     DEBIAN_FRONTEND=noninteractive apt-get -y install percona-xtradb-cluster-garbd-2
 
-    cat >> /etc/rc.local <<EOF
+    cat > /etc/rc.local <<EOF
+#
 /usr/bin/garbd -d -a gcomm://192.168.50.101:4567 -g test -l /tmp/garbd-test.log
+exit 0
 EOF
 }
 
