@@ -20,4 +20,4 @@ EOF
 EOF
 }
 
-work &
+work > /dev/null 2>&1 &

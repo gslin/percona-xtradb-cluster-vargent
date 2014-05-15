@@ -76,4 +76,4 @@ server-id = 2
 EOF
 }
 
-work &
+work > /dev/null 2>&1 &
