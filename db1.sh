@@ -76,4 +76,4 @@ server-id = 1
 EOF
 }
 
-work() &
+work &

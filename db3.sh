@@ -20,4 +20,4 @@ EOF
 EOF
 }
 
-work() &
+work &
