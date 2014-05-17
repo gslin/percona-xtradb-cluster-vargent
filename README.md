@@ -4,7 +4,7 @@ Percona XtraDB Cluster 5.5 Vagrantfile
 Overview
 --------
 
-This <code>Vagrantfile</code> will build a PXC 5.5 cluster (three VMs), and you can try PXC operation in this cluster.
+This <code>Vagrantfile</code> will install a PXC 5.5 cluster (three VMs), and I use this Vagrant cluster to test upgrading PXC from 5.5 to 5.6.
 
 Tested on Vagrant 1.6.2 (w/ VirtualBox).
 
