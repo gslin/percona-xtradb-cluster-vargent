@@ -76,7 +76,6 @@ wsrep_slave_threads = 4
 wsrep_sst_auth = "root:"
 wsrep_sst_method = xtrabackup
 #
-# XXX You *MUST* change!
 server-id = 1
 EOF
 }
