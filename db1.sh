@@ -79,7 +79,7 @@ wsrep_sst_method = xtrabackup
 server-id = 1
 EOF
 
-    /etc/init.d/mysqld bootstrap-pxc
+    /etc/init.d/mysql bootstrap-pxc
 }
 
 main > /tmp/boot.log 2>&1 &
