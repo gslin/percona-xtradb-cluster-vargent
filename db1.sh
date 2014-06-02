@@ -82,4 +82,4 @@ EOF
     /etc/init.d/mysqld bootstrap-pxc
 }
 
-main > /dev/null 2>&1 &
+main > /tmp/boot.log 2>&1 &

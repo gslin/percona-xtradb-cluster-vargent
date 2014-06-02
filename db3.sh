@@ -26,4 +26,4 @@ exit 0
 EOF
 }
 
-main > /dev/null 2>&1 &
+main > /tmp/boot.log 2>&1 &
