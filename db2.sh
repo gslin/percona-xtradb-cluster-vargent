@@ -15,6 +15,8 @@ EOF
     DEBIAN_FRONTEND=noninteractive apt-get -Vy install dstat vim-nox
     DEBIAN_FRONTEND=noninteractive apt-get -Vy install percona-xtradb-cluster-server-5.5 xtrabackup
 
+    apt-get clean
+
     service mysql stop
 
     mkdir -p /srv/mysql /srv/tmp
