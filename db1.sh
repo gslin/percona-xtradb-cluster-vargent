@@ -14,10 +14,10 @@ deb http://repo.percona.com/apt precise main
 deb-src http://repo.percona.com/apt precise main
 EOF
 
-    apt-get update
+    apt-get -V update
 
-    DEBIAN_FRONTEND=noninteractive apt-get -y install dstat vim-nox
-    DEBIAN_FRONTEND=noninteractive apt-get -y install percona-xtradb-cluster-server-5.5 xtrabackup
+    DEBIAN_FRONTEND=noninteractive apt-get -Vy install dstat vim-nox
+    DEBIAN_FRONTEND=noninteractive apt-get -Vy install percona-xtradb-cluster-server-5.5 xtrabackup
 
     service mysql stop
 
