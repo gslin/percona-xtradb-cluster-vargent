@@ -1,6 +1,6 @@
 #!/bin/sh
 
-work() {
+main() {
     sed -i -e 's/us.archive.ubuntu.com/jp.archive.ubuntu.com/' /etc/apt/sources.list
 
     apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
@@ -81,4 +81,4 @@ server-id = 2
 EOF
 }
 
-work > /dev/null 2>&1 &
+main > /dev/null 2>&1 &
