@@ -5,7 +5,7 @@ main() {
 
     apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 
-    cat > /etc/apt/apt.conf <<EOF
+    nc -w 1 proxy.hinet.net 80 && cat > /etc/apt/apt.conf <<EOF
 Acquire::http::Proxy "http://proxy.hinet.net:80";
 EOF
 
