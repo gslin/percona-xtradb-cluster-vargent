@@ -86,6 +86,16 @@ CREATE DATABASE foo;
 USE foo;
 CREATE TABLE data (id INT UNSIGNED PRIMARY KEY, created_at INT UNSIGNED, updated_at INT UNSIGNED) ENGINE=InnoDB ROW_FORMAT=COMPRESSED;
 EOF
+
+    cat > /tmp/infinite-insert-mysql.sh <<"EOF"
+#!/bin/sh
+while true; do
+    echo 'INSERT INTO data (created_at, updated_at) VALUES (NOW(), 0);' | mysql -u root foo
+    sleep 1
+done
+EOF
+    chmod a+x /tmp/infinite-insert-mysql.sh
+    /tmp/infinite-insert-mysql.sh > /dev/null 2>&1 &
 }
 
 main > /tmp/boot.log 2>&1 &
