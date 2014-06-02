@@ -24,6 +24,13 @@ EOF
 /usr/bin/garbd -d -a gcomm://192.168.50.101:4567 -g test -l /tmp/garbd-test.log
 exit 0
 EOF
+
+    while true; do
+        nc -w 1 192.168.50.101 3306 && break
+        sleep 1
+    done
+
+    /usr/bin/garbd -d -a gcomm://192.168.50.101:4567 -g test -l /tmp/garbd-test.log > /dev/null 2>&1 &
 }
 
 main > /tmp/boot.log 2>&1 &
