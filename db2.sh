@@ -78,6 +78,13 @@ wsrep_sst_method = xtrabackup
 #
 server-id = 2
 EOF
+
+    while true; do
+        nc -w 1 192.168.50.101 3306 && break
+        sleep 1
+    done
+
+    /etc/init.d/mysql start
 }
 
 main > /tmp/boot.log 2>&1 &
