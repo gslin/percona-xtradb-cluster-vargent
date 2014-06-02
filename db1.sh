@@ -80,6 +80,12 @@ server-id = 1
 EOF
 
     /etc/init.d/mysql bootstrap-pxc
+
+    cat <<EOF | mysql -u root
+CREATE DATABASE foo;
+USE foo;
+CREATE TABLE data (id INT UNSIGNED PRIMARY KEY, created_at INT UNSIGNED, updated_at INT UNSIGNED) ENGINE=InnoDB ROW_FORMAT=COMPRESSED;
+EOF
 }
 
 main > /tmp/boot.log 2>&1 &
