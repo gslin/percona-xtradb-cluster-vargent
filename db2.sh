@@ -83,6 +83,16 @@ EOF
     done
 
     /etc/init.d/mysql start
+
+    cat > /tmp/infinite-insert-mysql.sh <<"EOF"
+#!/bin/sh
+while true; do
+    echo 'INSERT INTO data (created_at, updated_at) VALUES (UNIX_TIMESTAMP(), 0);' | mysql -u root foo
+    sleep 1
+done
+EOF
+    chmod a+x /tmp/infinite-insert-mysql.sh
+    /tmp/infinite-insert-mysql.sh > /dev/null 2>&1 &
 }
 
 main > /tmp/boot.log 2>&1 &
